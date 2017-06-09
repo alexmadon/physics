@@ -1,0 +1,9 @@
+for file in *3e0*.eps
+do 
+echo
+echo file is $file
+thebase=`basename $file .eps`
+newfile=`echo $thebase | tr . _`.eps
+echo newfile=$newfile
+mv $file $newfile
+done
