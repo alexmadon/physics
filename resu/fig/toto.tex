@@ -1,0 +1,56 @@
+\documentstyle[epsfig,A4,french,subfigure]{book}
+\begin{document}
+\def\subfigureA#1{
+\leavevmode
+\hbox{#1}
+}
+
+\begin{figure}[htb]
+ \centerline{\epsfig{file={cordeg.eps},width=10 cm,angle=-90}}   
+ \caption{ccccccc}
+ \label{figrenorm}
+\end{figure}
+
+
+\end{document}
+
+\begin{figure}
+\begin{tabular}[t]{ccc}
+\centerline{\subfigureA{\epsfig{file={reacdt1ga5e_04ite2.eps},width=4truecm}}\subfigureA{\epsfig{file={reacdt1ga5e_04ite4.eps},width=4truecm}}}\\
+\centerline{\subfigureA{\epsfig{file={reacdt1ga5e_04ite6.eps},width=4truecm}}\subfigureA{\epsfig{file={reacdt1ga5e_04ite8.eps},width=4truecm}}}\\
+\centerline{\subfigureA{\epsfig{file={reacdt1ga5e_04ite10.eps},width=4truecm}}\subfigureA{\epsfig{file={reacdt1ga5e_04ite12.eps},width=4truecm}}}\\
+\centerline{\subfigureA{\epsfig{file={reacdt1ga5e_04ite14.eps},width=4truecm}}\subfigureA{\epsfig{file={reacdt1ga5e_04ite16.eps},width=4truecm}}}\\
+\centerline{\subfigureA{\epsfig{file={reacdt1ga5e_04ite18.eps},width=4truecm}}\subfigureA{\epsfig{file={reacdt1ga5e_04ite20.eps},width=4truecm}}}
+\end{tabular} 
+\caption{Simulation du syst\`eme r\'eaction diffusion sur un r\'eseau
+de $100 \times 50$ sites. Un site en noir correspond \`a une valeur de
+$u$ sup\'erieure \`a la $(u_{max}-u_{min})/2$. Lorsque le temps
+\'evolue, on observe la formation
+de structures spatiales pouvant mod\'eliser
+l'apparition des taches sur la peau de certains animaux.}
+\label{figsymetr}
+\end{figure}
+
+
+\end{document}
+
+
+
+\begin{figure}[htb]
+\centerline{\epsfig{file={symetr.tex},width=10truecm,angle=-90}}
+\input symetr.tex
+\caption{Sym\'etries}
+\label{figsymetr}
+\end{figure}
+
+\begin{figure}
+{\centering
+\begin{tabular}[t]{ccc}
+\centerline{\subfigureA{\epsfig{file={modesB2.eps},width=3truecm,angle=-90}}\subfigureA{\epsfig{file={modesB2b.eps},width=3truecm,angle=-90}}\subfigureA{\fbox{\epsfig{file={modesB2bb.eps},width=3truecm,angle=-90}}}}\\
+\centerline{\subfigureA{\epsfig{file={modesB1.eps},width=3truecm,angle=-90}}\subfigureA{\epsfig{file={modesB1b.eps},width=3truecm,angle=-90}}\subfigureA{\epsfig{file={modesA2.eps},width=3truecm,angle=-90}}}\\
+\centerline{\subfigureA{\epsfig{file={modesA1.eps},width=3truecm,angle=-90}}\subfigureA{\fbox{\epsfig{file={modesA1b.eps},width=3truecm,angle=-90}}}\subfigureA{\fbox{\epsfig{file={modesA1bb.eps},width=3truecm,angle=-90}}}}\\
+\end{tabular} 
+}
+\end{figure}
+\end{document}
+

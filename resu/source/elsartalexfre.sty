@@ -1,0 +1,71 @@
+% elsartalexfre.sty permet d'utiliser endfloat ave les commandes
+% elsart
+% En FRANCAIS
+
+
+\def\@begintheorem#1#2{\trivlist \item[\hskip \labelsep{\bf #1\ #2.}]\it}
+%rajoute le poit
+
+\newtheorem{thm}{Th\'eor\`eme}[chapter]
+\newtheorem{cor}{Corollaire}[chapter]
+\newtheorem{lem}[thm]{Lemme}
+\newtheorem{claim}[thm]{Claim}
+\newtheorem{axiom}[thm]{Axiome}
+\newtheorem{conj}[thm]{Conjecture}
+\newtheorem{fact}[thm]{Fact}
+\newtheorem{hypo}[thm]{Hypoth\`ese}
+\newtheorem{assum}[thm]{Assumption}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{crit}[thm]{Criterion}
+\newtheorem{defn}{D\'efinition}[chapter]
+\newtheorem{exmp}{Exemple}[chapter]
+\newtheorem{rem}{Remarque}[chapter]
+\newtheorem{prob}{Probl\`eme}[chapter]
+\newtheorem{prin}{Principe}[chapter]
+\newtheorem{alg}{Algorithme}
+\newtheorem{postulat}{Postulat}[chapter]
+\newtheorem{loi}{Loi}[chapter]
+\newtheorem{exo}{Exercice}[chapter]
+
+\def\d{{\rm d}}
+
+
+\newenvironment{pf}{{\bf Preuve.} \it}{\rm}
+
+\def\qed{%
+$\Box$\medbreak}
+
+\def\title#1{{\bf\Large#1}\\ \vspace{3cm}}
+%\newenvironment{frontmatter}{\begin{center}}{\end{center}}
+\def\author#1{{\bf #1}\\}
+\def\address#1{{\it #1}\\}
+\newenvironment{keyword}{Keywords : \tt}{\rm\\}
+
+
+\def\beq{\begin{equation}}
+\def\eeq{\end{equation}}
+
+\def\bea{\begin{eqnarray}}
+\def\eea{\end{eqnarray}}
+
+%%%%%%%%%%%%%%%%%%%%
+ 
+\def\footeq{%
+\edef\@savedequation{\the\c@equation}% sauve le numero de l'equation 
+\edef\oldtheequation{\theequation}   % sauve l'ancienne commande
+\setcounter{equation}{0}        %utilise le compteur d'equation predefini
+\def\theequation{\arabic{equation}}%defini la nouvelle commande
+}
+
+\def\endfooteq{%
+\edef\theequation{\oldtheequation}%
+\setcounter{equation}{\@savedequation}}
+
+
+
+\newcommand{\grad}{{\rm grad}}
+\newcommand{\dive}{{\rm div}}
+\newcommand{\rot}{{\rm rot}}
+\newcommand{\intt}{\int\!\!\!\int}
+\newcommand{\inttt}{\int\!\!\!\int\!\!\!\int}
+
