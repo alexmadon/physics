@@ -1,0 +1,41 @@
+This is MlTeX, C Version 3.141 (C version d) (format=lplain 92.12.10)  1 DEC 1996 03:06
+**symetr.tex
+(symetr.tex
+LaTeX Version 2.09 <25 March 1992>
+(/d2/local/lib/tex/inputs/standard/article.sty
+Standard Document Style `article' <14 Jan 92>.
+(/d2/local/lib/tex/inputs/standard/art10.sty)
+\c@part=\count82
+\c@section=\count83
+\c@subsection=\count84
+\c@subsubsection=\count85
+\c@paragraph=\count86
+\c@subparagraph=\count87
+\c@figure=\count88
+\c@table=\count89
+) (symetr.aux)
+Overfull \hbox (136.14624pt too wide) in paragraph at lines 94--95
+[][] 
+
+\hbox(228.54446+0.0)x345.0
+.\hbox(0.0+0.0)x0.0
+.\hbox(228.54446+0.0)x481.14624
+..\hbox(228.54446+0.0)x481.14624, glue set 581.38504fil
+...\glue -100.2388
+...\hbox(527.92435+0.0)x0.0, shifted 307.39899 []
+...\glue 0.0 plus 1.0fil minus 1.0fil
+.\penalty 10000
+.\glue(\parfillskip) 0.0 plus 1.0fil
+.\glue(\rightskip) 0.0
+
+[1] (symetr.aux) ) 
+Here is how much of TeX's memory you used:
+ 162 strings out of 11850
+ 1598 string characters out of 86328
+ 30744 words of memory out of 262141
+ 2202 multiletter control sequences out of 9500
+ 18996 words of font info for 72 fonts, out of 100000 for 255
+ 31 hyphenation exceptions out of 607
+ 12i,11n,16p,136b,235s stack positions out of 300i,40n,60p,3000b,4000s
+
+Output written on symetr.dvi (1 page, 3220 bytes).

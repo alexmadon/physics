@@ -1,4 +1,6 @@
-# physics
+# Alex's Physics
+
+Well, I do own a PhD in physics. I uploaded that Physics related work to github as a backup and to share it with others.
 
 ## PhD Thesis
 
@@ -22,3 +24,34 @@ pdflatex these96
 ```
 
 You should then have a PDF file these96.pdf
+
+
+
+## Introduction to mathematical Physics
+
+This is the LaTeX source code of my free book on mathematical Physics.
+
+A HTML preview can be seen on wikibooks at:
+
+https://en.wikibooks.org/wiki/Introduction_to_Mathematical_Physics
+
+
+There are two versions of the book.
+For the version in English:
+
+```bash
+cd resuengl/source/
+bibtex resue
+makeindex resue
+pdflatex resue
+```
+
+
+For the version in French:
+
+```bash
+cd resu/source/
+bibtex resu
+makeindex resu
+pdflatex resu
+```

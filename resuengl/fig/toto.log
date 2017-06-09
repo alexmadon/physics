@@ -1,0 +1,69 @@
+This is MlTeX, C Version 3.141 (C version d) (format=lplain 92.12.10)  25 JAN 1997 21:23
+**toto.tex
+(toto.tex
+LaTeX Version 2.09 <25 March 1992>
+(/d2/local/lib/tex/inputs/standard/book.sty
+Standard Document Style `book' <14 Jan 92>.
+(/d2/local/lib/tex/inputs/standard/bk10.sty)
+\descriptionmargin=\dimen99
+\c@part=\count82
+\c@chapter=\count83
+\c@section=\count84
+\c@subsection=\count85
+\c@subsubsection=\count86
+\c@paragraph=\count87
+\c@subparagraph=\count88
+\c@figure=\count89
+\c@table=\count90
+)
+(/d2/local/lib/tex/inputs/standard/epsfig.sty
+Document style option `epsfig', v1.9 <22 Dec 92> (edited by SPQR)
+\ps@dimcent=\dimen100
+(/d2/local/lib/tex/inputs/standard/epsf.tex
+\epsffilein=\read1
+\epsfxsize=\dimen101
+\epsfysize=\dimen102
+\epsftsize=\dimen103
+\epsfrsize=\dimen104
+\epsftmp=\dimen105
+\pspoints=\dimen106
+)
+\p@intvaluex=\dimen107
+\p@intvaluey=\dimen108
+)
+(/d2/local/lib/tex/inputs/standard/A4.sty
+Style option `A4' 1.2a <30 Nov 90> (NP and JLB)
+English documentation   <26 Feb 90> (JLB)
+)
+(/d2/local/lib/tex/inputs/standard/french.sty
+\@unused=\write3
+
+
+ Option de style FRENCH V3.10  -- 23 novembre 1992 -- (GUTenberg & co)
+(/d2/local/lib/tex/inputs/standard/english.sty)
+\@tempbi=\box25
+\@tempbii=\box26
+\@tempbiii=\box27
+\@tempbiiii=\box28
+\@tempbvi=\box29
+\@tempbvii=\box30
+\@openquotes=\box31
+\@hminusem=\dimen109
+\@hminusLRM=\dimen110
+\@nycount=\count91
+\@ordinal=\count92
+)
+(/d2/local/lib/tex/inputs/divers/subfigure.sty
+\c@subfigure=\count93
+\@subfigtemp=\count94
+) (toto.aux) [1] (toto.aux) ) 
+Here is how much of TeX's memory you used:
+ 893 strings out of 11850
+ 8192 string characters out of 86328
+ 41395 words of memory out of 262141
+ 2907 multiletter control sequences out of 9500
+ 19297 words of font info for 73 fonts, out of 100000 for 255
+ 31 hyphenation exceptions out of 607
+ 12i,4n,18p,224b,192s stack positions out of 300i,40n,60p,3000b,4000s
+
+Output written on toto.dvi (1 page, 456 bytes).

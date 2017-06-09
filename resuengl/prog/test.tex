@@ -1,0 +1,23 @@
+\documentstyle[epsfig,subfigure]{book}
+% bibtex resu
+% makeindex resu.tex
+
+\def\subfigureA#1{
+\leavevmode
+\hbox{#1}
+}
+
+\begin{document}
+
+\begin{figure}
+\begin{tabular}[t]{c c}
+\centerline{\subfigureA{\epsfig{file={b0_3.eps},width=5truecm,height=3truecm}}\subfigureA{\epsfig{file={n0_3.eps},width=5truecm,height=3truecm}}}\\
+\centerline{\subfigureA{\epsfig{file={b0_4.eps},width=5truecm,height=3truecm}}\subfigureA{\epsfig{file={n0_4.eps},width=5truecm,height=3truecm}}}\\
+\centerline{\subfigureA{\epsfig{file={b0_5.eps},width=5truecm,height=3truecm}}\subfigureA{\epsfig{file={n0_5.eps},width=5truecm,height=3truecm}}}
+\end{tabular} 
+\caption{Comparition of a progressive zooming on a brownian motion and
+on a differentiable function}
+\label{fftchro}
+\end{figure}
+
+\end{document}
