@@ -1,0 +1,880 @@
+% Upper-case    A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+% Lower-case    a b c d e f g h i j k l m n o p q r s t u v w x y z
+% Digits        0 1 2 3 4 5 6 7 8 9
+% Exclamation   !           Double quote "          Hash (number) #
+% Dollar        $           Percent      %          Ampersand     &
+% Acute accent  '           Left paren   (          Right paren   )
+% Asterisk      *           Plus         +          Comma         ,
+% Minus         -           Point        .          Solidus       /
+% Colon         :           Semicolon    ;          Less than     <
+% Equals        =           Greater than >          Question mark ?
+% At            @           Left bracket [          Backslash     \
+% Right bracket ]           Circumflex   ^          Underscore    _
+% Grave accent  `           Left brace   {          Vertical bar  |
+% Right brace   }           Tilde        ~
+
+\documentstyle[epsfig]{elsart}
+
+\def\subfigureA#1{
+\leavevmode
+\hbox{#1}
+}
+
+\def\lsfig{
+A01Hfour.eps
+A02Hfour.eps
+A03Hfour.eps
+A04Hfour.eps
+A05Hfour.eps
+A06Hfour.eps
+A07Hfour.eps
+A08Hfour.eps
+A09Hfour.eps
+A10Hfour.eps
+poidsforme.eps
+lock.eps
+
+}
+
+
+
+\begin{document}
+\begin{frontmatter}
+
+\title {A model for the bifurcations in plasma drift-waves}
+\author {Alex Madon}
+\address {CNRS, Centre de Physique Th\'eorique, Luminy,
+         Case 907, F-13288 Marseille, France, 
+         madon@cpt.univ-mrs.fr}
+\author{Thomas Klinger}
+\address{Institut f\"ur Experimentalphysik, 
+Christian-Albrechts-Universit\"at,
+Kiel, Olshausenstrasse 40-60, D-24098 Kiel, Germany}
+
+\begin{abstract}
+Spatiotemporal data from a plasma drift--wave experiment are analyzed
+by the biorthogonal decomposition (BOD). A describing of the route
+to turbulence is given in terms of  modulated monochromatic 
+travelling waves.
+A low dimensional dynamical system decribing some of the features 
+of the route to the weak turbulence observed is presented.
+\end{abstract}
+
+\begin{keyword} turbulence , drift-waves, 
+bifurcation,
+PACS : 52.35.R, 52.35.K, 47.20.K.
+\end{keyword}
+\end{frontmatter}
+
+\section{Introduction}\label{Introduction}
+%%%%%%%%%%%%%%%
+
+The understanding of the route to chaos and turbulence
+for spatially extended systems is still a widely open question.
+In many  systems, this route involves waves
+(see \cite{Craick} and references therein).
+Many theoretical approaches are based on wave interaction schemes
+\cite{Craick}, for instance
+the three wave interaction \cite{kaup79,chow95,Hasegawa77}.
+Once the notion of modes is carefully defined, some phenomena
+like period doubling, intermittency, and mode-locking
+\cite{Jensen83a,Bishop86a,Stavans85}
+can be understood in the framework of low-dimensional systems
+theory. 
+
+
+%plasma
+Plasma turbulence  \cite{tsytovich} is considered  a
+generic example of  spatiotemporal turbulence.
+In particular, the drift-wave turbulence
+\cite{horton84,horton90} is of high interest
+for the understanding of anomalous transport in magnetically
+confined plasmas \cite{hendel68,horton84,wagner93}
+
+In this paper, we give a model of the route to 
+weakly developed turbulence
+observed in a plasma experiment.
+We will refer to a recent publication
+\cite{Madon96}
+where a spatiotemporal model for a speed doubling
+phenomenon was developed on the basis of experimental observations.
+In the present case we are facing
+a more complicated situation where several successive bifurcations occur
+as the control parameter is increased,  finally leading to weakly 
+developed turbulence behaviour.
+
+
+In Section \ref{Experimental}  we present the experimental setup.
+In this paper ten data sets are used.
+Each of them describe the state of the system for a specific
+control parameter value.
+%*********
+These data sets are then analyzed (Section \ref{analysis}) by using
+the method of the Modulated 
+Monochromatic Traveling Waves introduced in \cite{Madon96}. In
+particular a mode-locking \cite{Arnold89} phenomenon is observed.
+A low dimensional dynamical model system 
+is constructed in Section \ref{Model} for the description
+of the observed route to
+turbulence. Indications about the dimension 
+and bifurcations arising
+in this experiment are given.
+
+
+\section{Experimental Investigations}\label{Experimental}
+%%%%%%%%%%%%
+The experimental setup has been presented previously (see Ref.
+\cite{Madon96,latten95}). It consists of three structurally and
+functionally distinct regions : a central section and two
+multidipole-confined discharge source chambers. 
+For the present investigations, only one chamber is active.
+Each chamber is separated from the central column by a biased grid.
+The voltage of the grid $U_{g_1}$ separating the active chamber and the
+midsection is the control parameter of the experiment. The voltage of
+the second grid is set to zero. We chose to vary only the one
+experimental parameter 
+in order to simplify the analysis. The bias of the
+injection grid is an accessible experimental parameter
+that leaves the other plasma parameter almost unchanged.
+The values of the other parameters can be found in \cite{Madon96}.
+
+The main diagnostic tool is an azimuthally arranged multi-channel
+Langmuir probe array \cite{latten95}. It is located in the middle of
+the column, in a radial plane. Each Langmuir probe provides
+the temporal fluctuations of the temporal plasma density $n_e$.
+The total probe array allows one to measure with high precision
+the temporal evolution of the spatial 
+structure of drift waves which propagate predominantly in the azimuthal 
+direction of the plasma column.
+The temporal resolution is given by the maximum sample 
+rate of the acquisition system ($\Delta t=1\mu{\rm s}$), and the spatial
+resolution is given by the azimuthal angle between each two probes
+($\Delta x=2\pi/64$). The data is stored as an $N \times M$-matrix
+$u_{i,j}=n_{e}(i\Delta x,j\Delta t)$ where $N=64$ (space) and $M=2048$ 
+(time). 
+
+
+\begin{table}[htb]
+ \begin{center}
+  \caption{Values of the voltage $U_{g_1}$.}
+  \label{values}
+  \begin{tabular}{l|c|c|c|c|c|c|c|c|c|c}
+label of the voltage     &$\epsilon_1$ &$\epsilon_2$ &$\epsilon_3$ &$\epsilon_4$ &$\epsilon_5$ &$\epsilon_6$ &$\epsilon_7$ &$\epsilon_8$ &$\epsilon_9$ &$\epsilon_{10}$\\
+\hline
+values of $U_{g_1}$(V) &5.8&5.9&6.1&6.5&7.1&7.6&7.8&8.0&8.4&9.8
+  \end{tabular}
+\end{center}
+\end{table}
+
+In the present paper, we refer to ten spatiotemporal data sets
+corresponding to ten values of the control parameter $U_{g_1}$ noted
+$\epsilon_n$, $n\in (1,\dots,10)$ (See
+Tab. \ref{values} for the values).
+Data sets are noted  ${\cal A}_n$ ($n=1,\dots,10$).
+For each value of the control parameter $\epsilon_n$, 
+the dynamical state of the physical system is described by
+the experimentally obtained function $u^{\epsilon_n}(x,t)$.
+
+\section{Analysis of the experimental data sets}\label{analysis}
+%%%%%%%%%%%%%
+The experimental data sets have been analyzed by using a method set up
+in \cite{Madon96}. This method uses MMTW (Modulated Monochromatic
+Traveling Waves) and is based on the BiOrthogonal
+Decomposition BOD \cite{LimaCom,LimaSym,LimaMod} of the functions
+$u^{\epsilon_n}(x,t)$. 
+The BOD decomposes a function $u(x,t)$ into temporal  and 
+spatial orthogonal modes and $u(x,t)$ can be written as follows :
+\begin{equation}
+u(x,t)=\sum \alpha_n \psi_n(t)\phi_n(x),
+\end{equation}
+with $\alpha_1\geq\alpha_2\geq\dots\geq 0$, and the orthogonality
+ relations $(\phi_n,\phi_m)=\delta_{n,m}$ and 
+$(\psi_n,\psi_m)=\delta_{n,m}$. The $\phi_n$ are called topos,
+ and the $\psi_n$ chronos.
+In \cite{Madon96}, we provided a method to group by pairs the
+eigensolutions $(\alpha_n,\phi_n,\psi_m)$, such that the projected
+signal defined by 
+\begin{equation}
+u_{m,n}(x,t)=a_m \psi_m(t)\phi_m(x)+a_n \psi_n(t)\phi_n(x),
+\end{equation}
+can be considered as a modulation (in a sense defined in
+\cite{Madon96}) of a monochromatic  wave of wave number $k$
+and (temporal) frequency $\omega$.
+
+
+The dynamics
+associated to the MMTW can be then described by a temporal
+complexification $a_k(t)$ defined by :
+\begin{equation}
+a_k(t)=\alpha_m\psi_m(t)+i\alpha_n\psi_n(t)
+\end{equation}
+where $k$ is the wave number of the monochromatic traveling wave
+associated to the MMTW.
+In a similar way, spatial complexifications are defined by 
+\begin{equation}
+b_k(x)=\alpha_m\phi_m(x)+i\alpha_n\phi_n(x),
+\end{equation}
+and describe the spatial structure of the MMTW.
+
+In this paper, we don't develop the method we used to group by pair
+the eigenvectors (see Ref.\cite{Madon96} for a practical example of the
+using of the method). We present only the evolution of some of the
+quantities characterizing the MMTW's found in the experimental data
+sets. 
+
+The figure Fig.\ref{fftchro} shows the modulus squared Fourier
+transforms  of the  four complexifications $a_k(t)$ ($k\in(1,\dots,4)$
+for the ten values of 
+the control parameter. The MMTW with $k$ numbers $(1,\dots,4$ are always the most energetic,
+whatever the value of $\epsilon$ is. The Fourier transforms of the
+complexifications 
+$a_1$, $a_2$ and $a_4$ have not been plotted for the data set ${\cal
+A}_1$ , because the energy of
+the corresponding MMTW's are close to zero (see Fig.\ref{poidsforme}).
+In the 
+appendix \ref{MMTW} 
+we show how the degeneracy of the energies of two MMTW's can result in a
+mixing of two frequencies (i.e a strong modulation of the $a_k$'s).
+This phenomenon can be observed 
+in the Fourier transform of ${\cal A}_4$, ${\cal A}_5$  where
+degeneracies have been observed for the MMTW's of number $k=1$ and
+$k=2$ and for the MMTW's of number $k=3$ and $k=4$.
+
+\begin{figure}
+\begin{tabular}[t]{c c}
+\centerline{\subfigureA{\epsfig{file={A01Hfour.eps},width=6truecm,height=2.4truecm}}\subfigureA{\epsfig{file={A06Hfour.eps},width=6truecm,height=2.4truecm}}}\\
+\centerline{\subfigureA{\epsfig{file={A02Hfour.eps},width=6truecm,height=2.4truecm}}\subfigureA{\epsfig{file={A07Hfour.eps},width=6truecm,height=2.4truecm}}}\\
+\centerline{\subfigureA{\epsfig{file={A03Hfour.eps},width=6truecm,height=2.4truecm}}\subfigureA{\epsfig{file={A08Hfour.eps},width=6truecm,height=2.4truecm}}}\\
+\centerline{\subfigureA{\epsfig{file={A04Hfour.eps},width=6truecm,height=2.4truecm}}\subfigureA{\epsfig{file={A09Hfour.eps},width=6truecm,height=2.4truecm}}}\\
+\centerline{\subfigureA{\epsfig{file={A05Hfour.eps},width=6truecm,height=2.4truecm}}\subfigureA{\epsfig{file={A10Hfour.eps},width=6truecm,height=2.4truecm}}}
+\end{tabular} 
+\caption{Modulus squared Fourier transforms of the complexifications $a_k(t)$,
+$k=1,\dots,4$ for the ten data sets $A_1$ to
+$A_{10}$. In each subfigure, the $k^{th}$ row corresponds to a spatial
+frequency $k$. In the first subfigure, the Fourier transforms of the
+functions $a_1$, $a_2$ and $a_4$ are set to zero. Frequency unit : $10
+^{4}$ Hertz.}
+\label{fftchro}
+\end{figure}
+
+The figure Fig.\ref{poidsforme} shows the evolution of the energy of
+the waves of spatial frequencies $k=1, \dots,4$.
+\begin{figure}[htb]
+ \centering
+ \epsfig{file={poidsforme.eps},width=10truecm,angle=-90} 
+ \caption{Sketch of the evolution of the energies of the waves deduced
+from the analysis of the experimental data sets.}
+ \label{poidsforme}
+\end{figure}
+The sketch shown in Fig. \ref{lock} elucidates 
+the evolution of the temporal frequencies 
+as $\epsilon$ increases.
+\begin{figure}[htb]
+ \centering
+ \epsfig{file={lock.eps},width=10truecm,angle=-90}
+
+%bbllx=2.5cm,bblly=19.5cm,bburx=18.5cm,bbury=27.5cm}    
+ \caption{Evolution of the temporal frequency with $\epsilon$.
+Solid lines : mode m=1 and mode m=3. Dashed line : mode m=2.
+Dotted line : mode m=4. Note the rapid increase of $\Omega_3$ just before
+the bifurcation point.}
+ \label{lock}
+\end{figure}
+%
+ For the value
+$\epsilon_1$ of
+the control parameter, we practically have only one wave, which spatial
+frequency is $k=3$ and temporal frequency is $\Omega_3$. For the value
+$\epsilon_2$ , we have now four waves with spatial
+frequencies $k=1$ to $k=4$. The frequency of the wave $k=3$ is
+basically unchanged and equal to $\Omega_3$. The other
+complexifications $a_k$ have temporal frequencies $\Omega_k$ with the
+condition : $\Omega_2$ is $\Omega_3-\Omega_1$ and $\Omega_4$ is
+$\Omega_3+\Omega_1$. When $\epsilon$ has the value $\epsilon_3$, the
+state has the same properties. However, when $\epsilon=\epsilon_4$, a
+mode locking phenomenon occurs. It corresponds to the the resonance
+condition 
+$\Omega_3-\Omega_1=2\Omega_1$.
+The mode locked state disappears in the 
+data set  ${\cal A}_6$. Indeed, in this data set,
+a second frequency appears
+associated with the mode of winding number $m=1$.
+We $\epsilon$ is further increased, the modulations become stronger
+and the systems goes to a drift-waves turbulence state.
+
+\section{Model}\label{Model}
+%%%%%%%%%%%%%
+In this section, a set of model equations describing the observed 
+ route to  weakly developed turbulence is presented.
+The route to turbulence we described in the previous section can be
+summarized as follows : 
+
+
+
+\begin{center}
+stable plasma\\
+$\downarrow$\\
+a ``mother'' wave with $k=3$, and frequency $\Omega_3$\\
+$\downarrow$\\
+two ``mother'' waves :\\
+one with a $k=3$, and frequency $\Omega_3$\\
+and a second with  $k=1$ and frequency$\Omega_1$\\
++two ``daughter'' waves :\\
+one with $k=2$ and frequency $\Omega_3-\Omega_1$\\
+and a second with $k=4$ and frequency $\Omega_3+\Omega_1$\\
+$\downarrow$\\
+Mode-locking\\
+$\downarrow$\\
+turbulence\\
+\end{center}
+
+
+
+The terms ``mother'' and ``daughter'' denote the fact that the sister
+waves can not exist without the mother waves.
+The model description of the physical phenomenon is 
+mainly based on  the spatial and temporal complexifications.
+Because of their predominant role in the overall dynamics, we
+will only model the structures with a spatial winding number 1 to 4.
+As  the experimentally obtained spatial structures are close to
+perfect circles, we model the spatial complexifications
+by simple exponentials $b_k(x)=e^{ikx}$ where $k$ is the
+spatial winding number.
+The temporal complexifications $a_k(t)$ are here modeled as the
+solution of a dynamical system. This system reads
+
+\begin{eqnarray}
+\dot{a}_1&=&(i\omega_1+(\epsilon-\epsilon_{c_1}))a_1-r_{1,1}a_1\bar{a}_1a_1\nonumber\\
+&&+ic^{(1)}_{\bar{2},3}\bar{a}_2{a}_3+ic^{(1)}_{\bar{1},2}\bar{a}_1a_2+ic^{(1)}_{\bar{3},4}\bar{a}_3a_4\label{eq1}\\
+\dot{a}_2&=&ic^{(2)}_{\bar{1},3}\bar{a}_1{a}_3+ic^{(2)}_{1,1}a_1a_1+ic^{(2)}_{\bar{2},4}\bar{a}_2a_4\label{eq2}\\
+\dot{a}_3&=&(i\omega_3+(\epsilon-\epsilon_{c_3}))a_3-r_{3,3}a_3\bar{a}_3a_3\nonumber\\
+&&+ic^{(3)}_{1,2}a_1a_2+ic^{(3)}_{\bar{1},4}\bar{a}_1a_4\label{eq3}\\
+\dot{a}_4&=&ic^{(4)}_{1,3}a_1a_3+ic^{(4)}_{2,2}a_2a_2\label{eq4}
+\end{eqnarray}
+where $\epsilon_{c_3}<\epsilon_{c_1}$ and $r_{i,i}$ are positive real 
+numbers. $\epsilon_{c_3}$ and $\epsilon_{c_1}$ are the instability 
+thresholds of the wave of winding number $3$ and $1$, and the
+ $r_{i,i}$'s are related to the intensity of the nonlinear
+saturation phenomenon.
+Moreover we assume that the relation between $\omega_1$ and  $\omega_3$
+is the same than the one given by experiment.
+More precisely we assume that :
+
+\begin{equation}\label{relatom}
+\omega_3 \sim 2.5\omega_1
+\end{equation}
+The coupling coefficients $c^{(k)}_{i,j}$ are real.
+
+\begin{rem}
+This set of equations takes into account all possible
+spatially resonant quadratic terms. 
+The monomials of the type $u_{k'}u_{k''}$  are
+called  spatially resonant with the
+mode $k$ if $k'+k''=k$. 
+The order of the resonance is 2. The cubic terms
+are associated to resonances of order 3. The only cubic terms
+written are the saturation terms of a Landau equation.
+\end{rem}
+
+\begin{rem}
+With some additional hypotheses on the coupling coefficients,
+this system can be split into one part which is hamiltonian
+and another part which is not. All  monomials with a purely imaginary 
+coefficient correspond then to the hamiltonian part, and the
+monomials with a real coefficient (instability and saturation terms)
+correspond to the non-hamiltonian part.
+\end{rem}
+
+In the following, we will look for the solutions
+of (\ref{eq1}-\ref{eq4}) of the form
+
+\begin{equation}\label{cyc}
+a_k(t)=A_k e^{i\Omega_kt}
+\end{equation}
+where $A_k$ and $\Omega_k$ are two real numbers.
+
+Let us study the case were $\epsilon<\epsilon_{c_3}$.
+If we insert (\ref{cyc}) into the set of equations
+(\ref{eq1}-\ref{eq2}) we get the condition
+$A_1=A_2=A_3=A_4=0$. This solution is unique.
+This state corresponds to the stable plasma state.
+For $\epsilon_{c_3}<\epsilon<\epsilon_{c_1}$, we still have  the
+previous solution but in the case where the coupling vanishes,
+it is linearly unstable. We assume that it is also unstable
+when the coupling is nonzero.
+
+\begin{rem}
+In this paper, we don't give the proof of the 
+stability of the solutions we find. First numerical results on the
+stability analysis of the mode-locked solution
+indicate that Floquet exponents are very close to 1.
+\end{rem}
+
+Another state of type \ref{cyc} is defined by 
+$A_1=A_2=A_4=0$ and $A_3=\sqrt{\epsilon-\epsilon_{c_3}}$ and
+$\Omega_3=\omega_3$. In the case where the coupling is zero, 
+it is well known (Landau equation, see \cite{hohenberg93} for instance)
+that this state is stable.
+We assume that it remains stable when the coupling is nonzero.
+This state corresponds to the propagation of a single wave
+with a spatial winding number three.
+
+For $\epsilon<\epsilon_{c_1}$, we distinguish different cases.
+Let us assume that the coefficients $c^{(i)}_{j,k}$ are of the same order.
+As shown before, in the general case, the $A_k$'s and $\Omega_k$'s
+are functions of $\epsilon$.
+It is further assumed that there exists a range of
+$\epsilon$ such that 
+
+\begin{equation}\label{order}
+a_3\gg a_1 \gg a_2 \sim a_4
+\end{equation}
+In this case we can simplify each equation of the system 
+(\ref{eq1}-\ref{eq4})
+and we obtain finally
+
+
+
+\begin{eqnarray}
+\dot{a}_1&=&(i\omega_1+(\epsilon-\epsilon_{c_1}))a_1-r_{1,1}a_1\bar{a}_1a_1\nonumber\\
+&&+ic^{(1)}_{\bar{2},3}\bar{a}_2{a}_3+ic^{(1)}_{\bar{3},4}\bar{a}_3a_4\label{si1}\\
+\dot{a}_2&=&ic^{(2)}_{\bar{1},3}\bar{a}_1{a}_3\label{si2}\\
+\dot{a}_3&=&(i\omega_3+(\epsilon-\epsilon_{c_3}))a_3-r_{3,1}a_3\bar{a}_3a_3\nonumber\\
+&&+ic^{(3)}_{1,2}a_1a_2+ic^{(3)}_{\bar{1},4}\bar{a}_1a_4\label{si3}\\
+\dot{a}_4&=&ic^{(4)}_{1,3}a_1a_3\label{si4}
+\end{eqnarray}
+
+Inserting the trial solution (\ref{cyc}) into 
+the system of equations (\ref{si1}--\ref{si4}) we obtain the following
+information about the cycle states :
+
+\begin{enumerate}
+\item {\bf Locking conditions.} Because it was assumed
+that the $\Omega_k$ are numbers independent on $t$,
+the equations (\ref{si1}--\ref{si4}) imply a sequence of relations between
+the frequencies that reduce to the following two conditions :
+
+\begin{equation}\label{reom1}
+\Omega_2=\Omega_3-\Omega_1
+\end{equation}
+
+and 
+
+\begin{equation}\label{reom2}
+\Omega_4=\Omega_3+\Omega_1
+\end{equation}
+
+\begin{rem}
+When the relation order (\ref{order}) 
+is no longer valid, we get more relations
+which imply a stronger condition on locking.
+\end{rem}
+
+\item {\bf The amplitudes $A_1$ and $A_3$}. 
+Using the form of the trial solution
+(\ref{cyc}) and projecting (\ref{si1}) and (\ref{si3}) onto the real
+axis, we get 
+
+\begin{equation}\label{a1}
+A_1=\sqrt{\frac{\epsilon-\epsilon_{c_1}}{r_{1,1}}}
+\end{equation}
+and
+\begin{equation}\label{a2}
+A_3=\sqrt{\frac{\epsilon-\epsilon_{c_3}}{r_{3,3}}}.
+\end{equation}
+
+\begin{rem}
+This result gives a posteriori the range of $\epsilon$ where the
+oder relation  $a_3\gg a_1$ is valid. It corresponds to  values of
+$\epsilon$ slightly larger than $\epsilon_{c_1}$. 
+\end{rem}
+
+\begin{rem}
+Note that since the equations for $a_2$ and $a_4$ have no
+dissipation, we can not evaluate the amplitudes $A_2$ and $A_4$
+in the same way we have evaluated the amplitudes $A_1$ and $A_3$.
+\end{rem}
+
+
+\item {\bf Supplementary relations.} Using  (\ref{cyc})
+and projecting the system of equations (\ref{si1}-\ref{si4}) onto the 
+imaginary axis we get
+
+
+\begin{eqnarray}
+\Omega_1{A}_1&=&\omega_1A_1+c^{(1)}_{\bar{2},3}\bar{A}_2{A}_3+c^{(1)}_{\bar{3},4}\bar{A}_3A_4\\
+\Omega_2{A}_2&=&c^{(2)}_{\bar{1},3}\bar{A}_1{A}_3\\
+\Omega_3{A}_3&=&\omega_3A_3+c^{(3)}_{1,2}A_1A_2+c^{(3)}_{\bar{1},4}\bar{A}_1A_4\\
+\Omega_4{A}_4&=&c^{(4)}_{1,3}A_1A_3
+\end{eqnarray}
+
+This set of equations requires numerical treatment. In general
+the frequencies $\Omega_1$ and  $\Omega_3$ observed for an 
+$\epsilon$ larger than $\epsilon_{c_1}$ can be significantly
+different  from the linear values  $\omega_1$ and  $\omega_3$.
+
+\begin{rem}
+It cannot be excluded  that the  heuristic relation 
+for the frequencies \ref{relatom} is not the optimum for the model.
+\end{rem}
+\end{enumerate}
+As $\epsilon$ increases the relation
+$a_3 \gg a_1$ is violated.
+In that case, we need to take into account the complete system 
+of equations (\ref{eq1}-\ref{eq4}).
+The condition that the $\Omega_k$'s are independent of $t$
+implies then the stronger relation
+
+\begin{equation}\label{relom}
+\Omega_k=k\Omega_1
+\end{equation}
+
+
+\begin{rem}
+The conditions (\ref{reom1}) and (\ref{reom2}) are 
+ a special case of the relation (\ref{relom}).
+\end{rem}
+Projections onto the complex and real axes result in relations
+between the $A_k$'s and $\Omega_k$'s.
+Though we do not give these relations here, it is important
+to note that the state is now a mode-locked state, that is,
+a state where the frequencies obey relation (\ref{relom}).
+
+\begin{rem}
+Depending on the values of the $c^{(i)}_{j,k}$, the value of $A_2$
+can perform a sudden jump to mode-locking as observed
+in the experiment.
+\end{rem}
+
+
+
+
+\section{Conclusion}
+
+
+We have analyzed the route to weakly developed
+turbulence for a drift-wave plasma experiment.
+A set of model equations  describing this route
+is proposed.
+The model is not derived from a basic set of the plasma equations.
+It is based on the notion of spatial resonance
+and on general ideas of bifurcation theory.
+A set of ordinary differential equation s
+describes the observed relation
+between the temporal frequencies of the four first monochromatic waves
+observed in experiment.
+It describes furthermore the successive occurrence of different waves.
+
+{\bf acknowledgment}
+One of us (A.M)  acknowledges Prof. R. Lima for  helpful discussions.
+A.M. thank also Prof. A. Piel of the Institut
+f\"ur Experimentalphysik at Kiel and all his team for the 
+warm hospitality during part of this work.
+Dr. A. Latten is specially thanked for his patience when
+during the  recording of data sets. We thank also Prof. L. Lellouch
+for the corrections done on the manuscript.
+
+
+\appendix
+
+\section{MMTW and Degeneracy}\label{MMTW}
+%%%%%%%%%
+In Section \ref{analysis} it was stated
+that strong modulations occur
+when the eigenvalues are degenerate.
+In this appendix, it will be shown how the degeneracy
+of the energy of MMTW can induce such
+modulations.
+
+It is well known in the theory of 
+the spectral analysis of linear operators
+that if some eigenvalues are degenerate, each vector $\phi$
+of the corresponding eigenspace $E$ is an eigenvector. 
+If $R$ is an orthogonal operator which leaves $E$ globally
+invariant and if $\phi$ is an eigenvector it follows that $R\phi$
+is also an eigenvector.
+Using the correlation operator $U^+U$ it is
+sufficient to understand why in the case of two waves with
+the same energy  one observes
+strong modulations, i.e.,  rotations in the
+functional space $\chi(X)$. We give here a theorem
+associating the modulations in the space $\chi(T)$ with
+those in the space $\chi(X)$.
+
+Let us suppose that there exist $N$ eigensets $(a_i,\phi_i,\psi_i)$,
+ $1\leq i \leq N$
+with the same eigenvalues $a_i=a$ for  $1\leq i \leq N$,
+
+
+\begin{equation}
+U\phi_i=a\psi_i
+\end{equation}
+ 
+\begin{equation}
+U^+\psi_i=a\phi_i
+\end{equation}
+ 
+for  $i\in\{1,\dots, N\}$
+ 
+Let $R$ be the operator acting in $H(T)$, whose restriction to the
+eigenspace $E_T$ spanned by the vectors $\psi_i$, is orthogonal
+and leaves $E_X$ invariant
+ 
+\begin{equation}
+R^+R=1
+\end{equation}
+
+\begin{thm}
+If $(a,\phi_i,\psi_i)$ is an eigenset of one
+eigenvalue and corresponding eigenvectors, then there exists
+an operator $Q$ such that $(a,Q\psi_i,R\phi_i)$ is also an eigenset.
+$Q$ is defined by
+ 
+\begin{equation}
+<\phi_m|Q|\phi_n>=R_{m n}
+\end{equation}
+where $R_{mn}=<\psi_m|R|\psi_n>$.
+\end{thm}
+
+
+\begin{pf}
+Let us evaluate $U^+R\psi_i$ :
+ 
+\begin{equation}
+U^+R|\psi_i>=\sum_{m,n}U^+|\psi_m>R_{m n}<\psi_n|\psi_i>
+\end{equation}
+ 
+ 
+\begin{equation}
+U^+R|\psi_i>=\sum_{m,n}U^+|\psi_m>R_{m n}\delta_{n,i}
+\end{equation}
+ 
+ 
+\begin{equation}
+U^+R|\psi_i>=\sum_{m}U^+|\psi_m>R_{m i}
+\end{equation}
+ 
+Using the definition of the eigenvectors
+
+\begin{equation}
+U^+R|\psi_i>=a\sum_{m}R_{m i}|\phi_m>
+\label{ex2}
+\end{equation}
+
+we define the operator $Q$ by
+
+
+\begin{equation}
+<\phi_m|Q|\phi_n>=R_{m n}
+\end{equation}
+ 
+
+or equivalently by 
+
+\begin{equation}
+Q=\sum_{m,n}|\phi_m>R_{m n}<\phi_n|.
+\end{equation}
+ 
+ 
+
+Then let us evaluate the action of $Q$ on the eigenvector $\phi_i$
+
+ 
+\begin{equation}
+Q|\phi_i>=\sum_{m,n}|\phi_m>R_{m n}<\phi_n|\phi_i>
+\end{equation}
+ 
+\begin{equation}
+Q|\phi_i>=\sum_{m,n}|\phi_m>R_{m n}\delta_{n,i}
+\end{equation}
+ 
+\begin{equation}
+Q|\phi_i>=\sum_{m}R_{m i}|\phi_m>.
+\label{ex1}
+\end{equation}
+ 
+By identification of \ref{ex1} and \ref{ex2} it follows that 
+ 
+\begin{equation}
+U^+R|\psi_i>=a Q|\phi_i>.
+\end{equation}
+ 
+We show in the same way that
+ 
+\begin{equation}
+U Q|\phi_i>=a R|\psi_i>.
+\end{equation}
+ 
+\end{pf}
+
+
+
+\begin{rem}
+Let  $E_X$ the space spanned by the $|\phi_i>$, $1\leq i \leq N$ and
+$E_T$ the space spanned by the $|\psi_i>$, $1\leq i \leq N$.
+The restriction $U_r$ of $U$ to the eigenspace $E_X$, $E_T$
+has a symmetry in the sense of Ref. \cite{LimaSym}, 
+that is, there exists
+two operators $Q$ and $R$ such that :
+
+ 
+\begin{equation}
+U_r Q=R U_r
+\label{sym}
+\end{equation}
+ 
+This can be seen by writing the operator $U_r$ in 
+Dirac's notation a follows
+
+\begin{equation}
+U_r=\sum_i|\psi_i>a<\phi_i|
+\end{equation}
+ 
+and
+ 
+\begin{equation}
+U_r=\sum_i R|\psi_i>a<\phi_i|Q^+.
+\end{equation}
+ 
+Thus
+ 
+\begin{equation}
+U_r=R U_r Q^+
+\end{equation}
+ 
+which is equivalent to (\ref{sym}).
+
+\end{rem}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+In the case where two waves have the same energy the
+spectral problem has a degeneracy equal to four.
+So instead of observing  only one
+frequency in the eigenvectors, we observe two.
+
+
+\begin{rem}
+The rotation allowed when the eigenvalues
+are degenerate can be used to model certain bifurcation s
+\cite{LimaSym,LimaMod}.
+\end{rem}
+
+
+\begin{thebibliography}{10}
+
+\bibitem{Craick}
+A.~D.~D. Craik.
+\newblock {\em Wave interactions and fluid flows}.
+\newblock Cambridge University Press, 1985.
+
+\bibitem{kaup79}
+D.~J. Kaup, A.~Reiman, and A.~Bers.
+\newblock Space-time evolution of nonlinear three-wave interactions. i.
+  interaction in a homogeneous medium.
+\newblock {\em Rev. Mod. Phys.}, 51(2):275--309, April 1979.
+
+\bibitem{chow95}
+Carson~C. Chow.
+\newblock Spatiotemporal chaos in nonintegrable three-wave interactions.
+\newblock {\em Physica D}, 81:237--270, 1995.
+
+\bibitem{Hasegawa77}
+A.~Hasegawa and K.~Mima.
+\newblock Stationary spectrum of strong turbulence in magnetized nonuniform
+  plasma.
+\newblock {\em Phys. Rev. Lett.}, 39(4):205--208, July 1977.
+
+\bibitem{Jensen83a}
+M.~H. Jensen, P.~Bak, and T.~Bohr.
+\newblock Complete devil's staircase, fractal dimension, and universality of
+  mode-locking structure in the circle map.
+\newblock {\em Phys. Rev. Lett.}, 50:1637--1639, 1983.
+
+\bibitem{Bishop86a}
+A.~R. Bishop, M.~G. Forest, D.~W. McLaughlin, and E.~A. Overman.
+\newblock A quasiperiodic route to chaos in a near-integrable partial
+  differential equation.
+\newblock {\em Physica D}, 23:293--328, 1986.
+
+\bibitem{Stavans85}
+J.~Stavans, F.~Helsot, and A.~Libchaber.
+\newblock Fixed winding number and the quasiperiodic route to chaos in a
+  convective fluid.
+\newblock {\em Phys. Rev. Lett.}, 55:596, 1985.
+
+\bibitem{tsytovich}
+V.~N. Tsytovich.
+\newblock {\em An Introduction to the Theory of Plasma Turbulence}.
+\newblock Pergamon Press, Oxford, 1972.
+
+\bibitem{horton84}
+W.~Horton.
+\newblock Drift wave turbulence and anomalous transport.
+\newblock In A.~A. Galeev and R.~N. Sudan, editors, {\em Handbook of Basic
+  Plasma Physics}, volume~2, chapter 6.4, pages 383--449. North-Holland
+  Physics, Amsterdam, 1984.
+
+\bibitem{horton90}
+W.~Horton.
+\newblock Nonlinear drift waves and transport in magnetized plasmas.
+\newblock {\em Phys. Rep.}, 192(1-3):1--177, 1990.
+
+\bibitem{hendel68}
+H.~W. Hendel, T.~K. Chu, and P.~A. Politzev.
+\newblock Collisional drift waves. identification, stabilization and enhanced
+  plasma transport.
+\newblock {\em Phys. Fluids}, 1968.
+
+\bibitem{wagner93}
+F.~Wagner and U.~Stroth.
+\newblock Transport in toroidal devices - the experimentalist's view.
+\newblock {\em Plasma Phys. Controlled Fusion}, 35:1321--1371, 1993.
+
+\bibitem{Madon96}
+A.~Madon and T.~Klinger.
+\newblock Spatiotemporal bifurcations in plasma drift-waves.
+\newblock {\em Physica D}, pages 301--316, 1996.
+
+\bibitem{Arnold89}
+V.~I. Arnold and A.~Avez.
+\newblock {\em Ergodic problems of classical mechanics}.
+\newblock Addison-Wesley, 1989.
+
+\bibitem{latten95}
+A.~Latten, T.~Klinger, A.~Piel, and Th. Pierre.
+\newblock A probe array for the investigation of spatio-temporal structures in
+  drift wave turbulence.
+\newblock {\em Rev. Sci. Instrum.}, 66(5):3254--3262, 1995.
+
+\bibitem{LimaCom}
+N.~Aubry, R.~Guyonnet, and R.~Lima.
+\newblock Spatiotemporal analysis of complex signals : theory and applications.
+\newblock {\em J. Stat. Phys.}, 64(34):683--739, 1991.
+
+\bibitem{LimaSym}
+N.~Aubry, R.~Guyonnet, and R.~Lima.
+\newblock Spatio-temporal symmetries and bifurcations via bi-orthogonal
+  decompositions.
+\newblock {\em J. Nonlin. Sci.}, 2:183--215, 1992.
+
+\bibitem{LimaMod}
+N.~Aubry and R.~Lima.
+\newblock Spatio-temporal modulations and the route to turbulence : application
+  to modulated travelling waves.
+\newblock {\em Chaos}, 1995.
+
+\bibitem{hohenberg93}
+M.~C. Cross and P.~C. Hohenberg.
+\newblock Pattern formation outside of equilibrium.
+\newblock {\em Rev. Mod. Phys.}, 65, July 1993.
+
+\end{thebibliography}
+
+
+\end{document}
+
+
+
+
+
+
+\end{document}
