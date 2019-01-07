@@ -41,8 +41,10 @@ For the version in English:
 
 ```bash
 cd resuengl/source/
+pdflatex -interaction=nonstopmode resue
 bibtex resue
 makeindex resue
+pdflatex resue
 pdflatex resue
 ```
 
